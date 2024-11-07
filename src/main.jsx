@@ -7,6 +7,7 @@ import { DarkMoreProvider } from "./Context/DarkMoreProvider.jsx";
 import { Banner } from "./Component/Banner.jsx";
 import { JobCategories } from "./Component/JobCategories.jsx";
 import { Home } from "./Pages/Home.jsx";
+import { JobDetailsProvider } from "./Context/JobDetailsProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <DarkMoreProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <JobDetailsProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </JobDetailsProvider>
     </DarkMoreProvider>
   </StrictMode>
 );
