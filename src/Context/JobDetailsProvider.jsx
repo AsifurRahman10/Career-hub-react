@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 export const JobDetailsData = createContext();
 
 export const JobDetailsProvider = ({ children }) => {
-  const [jobDetails, setJObDetails] = useState();
+  const [jobDetails, setJObDetails] = useState([]);
   useEffect(() => {
     fetch("../jobs.json")
       .then((res) => res.json())
