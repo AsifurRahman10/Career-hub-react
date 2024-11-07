@@ -128,9 +128,6 @@ export const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <a className="btn text-lg font-extrabold px-6 md:py-2 bg-hero-pattern text-white hidden lg:block">
-            Start Applying
-          </a>
           <div className="form-control">
             <label className="label cursor-pointer gap-2">
               <span className="label-text text-[#7d90fe]">
@@ -144,6 +141,9 @@ export const Navbar = () => {
               />
             </label>
           </div>
+          <a className="btn text-lg font-extrabold px-6 md:py-2 bg-hero-pattern text-white hidden lg:block">
+            Start Applying
+          </a>
         </div>
       </div>
     </div>

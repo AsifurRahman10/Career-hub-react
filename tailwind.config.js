@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         'dark': '#757575',
+        'dark2': '#474747',
       },
     },
   },

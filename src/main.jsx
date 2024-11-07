@@ -5,6 +5,8 @@ import { Layout } from "./Layout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DarkMoreProvider } from "./Context/DarkMoreProvider.jsx";
 import { Banner } from "./Component/Banner.jsx";
+import { JobCategories } from "./Component/JobCategories.jsx";
+import { Home } from "./Pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Banner></Banner>,
+        element: <Home></Home>,
+        loader: () => fetch("../categories.json"),
       },
+      // {
+      //   path: "/",
+      //   element: <JobCategories></JobCategories>,
+      // },
     ],
   },
 ]);
