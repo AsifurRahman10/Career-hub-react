@@ -1,9 +1,17 @@
 import React from "react";
 import { CiLocationOn, CiDollar } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 export const JobCart = ({ item }) => {
-  const { logo, job_title, company_name, remote_or_onsite, location, salary } =
-    item;
+  const {
+    id,
+    logo,
+    job_title,
+    company_name,
+    remote_or_onsite,
+    location,
+    salary,
+  } = item;
   return (
     <div className="border-2 p-9 rounded-lg">
       <img src={logo} alt="" />
@@ -24,9 +32,11 @@ export const JobCart = ({ item }) => {
           </span>
         </div>
       </div>
-      <button className="bg-hero-pattern btn px-6 text-white font-extrabold mt-6">
-        View Details
-      </button>
+      <NavLink to={`jobDetails/${id}`}>
+        <button className="bg-hero-pattern btn px-6 text-white font-extrabold mt-6">
+          View Details
+        </button>
+      </NavLink>
     </div>
   );
 };

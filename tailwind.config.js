@@ -9,6 +9,8 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "linear-gradient(to right, #7E90FE, #7E90FE)",
+        'bg-2': "url('./assets/images/bg2.png')",
+        'bg-1': "url('./assets/images/bg1.png')",
       },
       colors: {
         'dark': '#757575',

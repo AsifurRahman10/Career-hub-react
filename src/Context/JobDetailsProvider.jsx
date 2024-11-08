@@ -3,11 +3,11 @@ import React, { createContext, useEffect, useState } from "react";
 export const JobDetailsData = createContext();
 
 export const JobDetailsProvider = ({ children }) => {
-  const [jobDetails, setJObDetails] = useState([]);
+  const [jobDetails, setJobDetails] = useState([]);
   useEffect(() => {
     fetch("../jobs.json")
       .then((res) => res.json())
-      .then((data) => setJObDetails(data));
+      .then((data) => setJobDetails(data));
   }, []);
   return (
     <JobDetailsData.Provider value={{ jobDetails }}>

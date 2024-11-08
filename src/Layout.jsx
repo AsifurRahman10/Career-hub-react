@@ -9,7 +9,9 @@ export const Layout = () => {
   return (
     <div className={darkMode ? "bg-[#121212]" : "bg-white"}>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="min-h-[calc(100vh-498px)]">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );
