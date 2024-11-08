@@ -1,8 +1,21 @@
-# React + Vite
+# CareerHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://career-hublm10.netlify.app/)
 
-Currently, two official plugins are available:
+CareerHub is a responsive job portal website that helps users browse various job categories, view job details, and apply for jobs. The site includes a dark mode for comfortable viewing, and it is built with modern web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Dark Mode:** Toggle between light and dark themes for better accessibility.
+- **Responsive Design:** Fully responsive across devices.
+- **Job Categories:** Browse jobs based on specific categories.
+- **Job Details:** View detailed information about each job.
+- **Apply for Jobs:** Easily apply for a job with one click.
+
+## Tech Stack
+
+- **Frontend Framework:** React
+- **CSS Framework:** Tailwind CSS, Daisy UI
+- **Notifications:** React Hot Toast
+- **Routing:** React Router
+- **State Management:** React Hooks (`useState`, `useEffect`, `Context API`)

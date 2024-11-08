@@ -18,7 +18,11 @@ export const Navbar = () => {
         darkMode ? "dark dark:bg-[#121212]" : "light bg-[#faf8ff]"
       }`}
     >
-      <div className={detailsPage ? "bg-bg-2 bg-no-repeat bg-right-top" : ""}>
+      <div
+        className={
+          detailsPage ? "bg-bg-2 bg-no-repeat bg-right-top md:py-8" : "md:py-8"
+        }
+      >
         <div className="navbar w-11/12 md:w-9/12 mx-auto">
           <div className="navbar-start">
             <div className="dropdown">

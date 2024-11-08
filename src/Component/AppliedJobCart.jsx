@@ -13,10 +13,10 @@ export const AppliedJobCart = ({ job }) => {
     salary,
   } = job;
   return (
-    <div className="flex justify-between items-center gap-6 border-2 p-7 rounded-lg">
-      <div className="flex gap-6">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-2 rounded-lg p-6">
+      <div className="flex flex-col md:flex-row gap-6">
         <div className="bg-[#f4f4f4] flex justify-center items-center px-8 py-16 rounded-lg">
-          <img className="w-[150px] " src={logo} alt="" />
+          <img className="w-full md:w-[150px]" src={logo} alt="" />
         </div>
         <div>
           <h2 className="text-2xl font-extrabold text-dark2">{job_title}</h2>
@@ -40,7 +40,7 @@ export const AppliedJobCart = ({ job }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="">
         <Link to={`/jobDetails/${id}`}>
           <button className="btn text-white bg-hero-pattern">
             View Details
