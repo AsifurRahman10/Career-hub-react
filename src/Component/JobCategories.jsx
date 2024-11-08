@@ -9,7 +9,7 @@ export const JobCategories = () => {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <div className={darkMode ? "dark dark:bg-[#121212]" : "light bg-white"}>
-      <div className="py-24 w-11/12 md:w-9/12 mx-auto">
+      <div className="pt-0 pb-10 md:py-24 w-11/12 md:w-9/12 mx-auto">
         <Title
           title="Job Category List"
           details="Explore thousands of job opportunities with all the information you need. It's your future"

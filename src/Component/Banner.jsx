@@ -7,7 +7,7 @@ export const Banner = () => {
   return (
     <div className={darkMode ? "dark dark:bg-[#121212]" : "light bg-[#faf8ff]"}>
       <div className="w-11/12 md:w-9/12 mx-auto">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-col md:flex-row">
           <div className="space-y-6 dark:text-white">
             <h2 className="text-7xl font-extrabold">
               One Step <br /> Closer To Your <br />{" "}
