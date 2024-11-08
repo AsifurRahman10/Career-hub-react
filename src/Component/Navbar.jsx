@@ -7,7 +7,8 @@ export const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const { pathname } = useLocation();
-  const detailsPage = pathname.includes("jobDetails");
+  const detailsPage =
+    pathname.includes("jobDetails") || pathname.includes("appliedJob");
   const handleDropDownToggle = () => {
     setOpenNav(!openNav);
   };
@@ -60,7 +61,7 @@ export const Navbar = () => {
                     Home
                   </NavLink>
                   <NavLink
-                    to="applied-job"
+                    to="appliedJob"
                     className={({ isActive }) =>
                       `font-medium ${
                         isActive
@@ -110,7 +111,7 @@ export const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="applied-job"
+                to="appliedJob"
                 className={({ isActive }) =>
                   `font-medium ${
                     isActive
@@ -157,7 +158,7 @@ export const Navbar = () => {
         {detailsPage && (
           <div className="py-36 bg-bg-1 bg-no-repeat bg-left-bottom">
             <h2 className="text-center font-extrabold text-3xl dark:text-white">
-              Job Details
+              {pathname.includes("jobDetails") ? "Job Details" : "Applied Jobs"}
             </h2>
           </div>
         )}

@@ -7,6 +7,8 @@ import { DarkMoreProvider } from "./Context/DarkMoreProvider.jsx";
 import { Home } from "./Pages/Home.jsx";
 import { JobDetailsProvider } from "./Context/JobDetailsProvider.jsx";
 import { JobDetails } from "./Pages/JobDetails.jsx";
+import { AppliedJob } from "./Pages/AppliedJob.jsx";
+import { ApplyJobProvider } from "./Context/ApplyJobProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
         element: <JobDetails></JobDetails>,
         loader: () => fetch("../jobs.json"),
       },
+      {
+        path: "appliedJob",
+        element: <AppliedJob></AppliedJob>,
+        loader: () => fetch("../jobs.json"),
+      },
     ],
   },
 ]);
@@ -30,9 +37,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <DarkMoreProvider>
-      <JobDetailsProvider>
-        <RouterProvider router={router}></RouterProvider>
-      </JobDetailsProvider>
+      <ApplyJobProvider>
+        <JobDetailsProvider>
+          <RouterProvider router={router}></RouterProvider>
+        </JobDetailsProvider>
+      </ApplyJobProvider>
     </DarkMoreProvider>
   </StrictMode>
 );
